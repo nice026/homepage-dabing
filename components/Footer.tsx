@@ -9,10 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="fade-in">
             <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              大兵的个人主页
+              大兵AI开发
             </h3>
             <p className="text-slate-300 mb-4">
-              10年+软件开发经验，专注于大型互联网产品研发与技术，致力于推动AI与技术融合发展。
+              15年+软件开发经验，专注于AI智能体与AI编程开发与商业化探索。
+            </p>
+            <p className="text-slate-300 mb-4">
+              AI创富，与你同行！AI让工作与生活更美好！
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-slate-700 transition-colors">
@@ -43,13 +46,7 @@ export default function Footer() {
                 <a href="#profile" className="text-slate-300 hover:text-white transition-colors">关于我</a>
               </li>
               <li>
-                <a href="#skills" className="text-slate-300 hover:text-white transition-colors">我的技能</a>
-              </li>
-              <li>
                 <a href="#portfolio" className="text-slate-300 hover:text-white transition-colors">我的作品</a>
-              </li>
-              <li>
-                <a href="#achievements" className="text-slate-300 hover:text-white transition-colors">我的成就</a>
               </li>
               <li>
                 <a href="#contact" className="text-slate-300 hover:text-white transition-colors">联系方式</a>
@@ -60,12 +57,12 @@ export default function Footer() {
           <div className="fade-in">
             <h3 className="text-xl font-bold mb-4">技术栈</h3>
             <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">AI智能体</span>
+              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">AI编程</span>
+              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">商业化探索</span>
               <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">React</span>
-              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">Vue</span>
               <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">TypeScript</span>
               <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">Node.js</span>
-              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">AI技术</span>
-              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">D2C</span>
             </div>
           </div>
         </div>
@@ -75,7 +72,7 @@ export default function Footer() {
             © {currentYear} 大兵的个人主页. 保留所有权利.
           </p>
           <p className="text-slate-400 mt-2">
-            致力于推动AI与技术融合发展，探索技术无限可能
+            AI创富，与你同行！AI让工作与生活更美好！
           </p>
         </div>
       </div>

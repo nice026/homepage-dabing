@@ -1,7 +1,5 @@
 import ProfileSection from "@/components/ProfileSection";
-import SkillsSection from "@/components/SkillsSection";
 import PortfolioSection from "@/components/PortfolioSection";
-import AchievementsSection from "@/components/AchievementsSection";
 import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,9 +11,7 @@ export default function Home() {
       
       <main className="container mx-auto px-4 py-8 max-w-6xl">
         <ProfileSection />
-        <SkillsSection />
         <PortfolioSection />
-        <AchievementsSection />
         <ContactSection />
       </main>
       
