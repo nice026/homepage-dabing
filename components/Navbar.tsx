@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import GoogleSignInButton from "./GoogleSignInButton";
-import GitHubSignInButton from "./GitHubSignInButton";
+// 暂时屏蔽OAuth登录组件导入
+// import GoogleSignInButton from "./GoogleSignInButton";
+// import GitHubSignInButton from "./GitHubSignInButton";
 import UserProfile from "./UserProfile";
 
 export default function Navbar() {
@@ -71,8 +72,10 @@ export default function Navbar() {
             {mounted && (
               <>
                 <UserProfile />
+                {/* 暂时屏蔽OAuth登录按钮
                 <GoogleSignInButton />
                 <GitHubSignInButton />
+                */}
               </>
             )}
           </div>
