@@ -11,6 +11,11 @@ export default function GitHubSignInButton() {
   const supabase = createClient()
 
   useEffect(() => {
+    // 如果Supabase未配置，不执行任何操作
+    if (!supabase) {
+      return
+    }
+
     // 获取初始用户状态
     const getUser = async () => {
       try {
@@ -31,12 +36,18 @@ export default function GitHubSignInButton() {
     )
 
     return () => subscription.unsubscribe()
-  }, [supabase.auth])
+  }, [supabase])
 
   const handleGitHubSignIn = async () => {
     setLoading(true)
     
     try {
+      // 如果Supabase未配置，显示错误提示
+      if (!supabase) {
+        alert('请先配置Supabase环境变量。请参考GITHUB_OAUTH_SETUP.md文件进行配置。')
+        return
+      }
+
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'github',
         options: {
