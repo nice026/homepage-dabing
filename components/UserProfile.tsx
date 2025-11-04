@@ -13,6 +13,12 @@ export default function UserProfile() {
   const supabase = createClient()
 
   useEffect(() => {
+    // 如果Supabase未配置，直接返回
+    if (!supabase) {
+      setLoading(false)
+      return
+    }
+
     // 获取初始用户状态
     const getUser = async () => {
       try {
@@ -40,9 +46,11 @@ export default function UserProfile() {
     )
 
     return () => subscription.unsubscribe()
-  }, [supabase.auth])
+  }, [supabase])
 
   const handleSignOut = async () => {
+    if (!supabase) return
+    
     try {
       await supabase.auth.signOut()
       router.refresh()
@@ -55,8 +63,10 @@ export default function UserProfile() {
   // 检查环境变量是否已配置
   const isConfigured = process.env.NEXT_PUBLIC_SUPABASE_URL && 
                       process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://abcdefgh.supabase.co' &&
+                      process.env.NEXT_PUBLIC_SUPABASE_URL !== 'your_supabase_project_url' &&
                       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY && 
-                      !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY.includes('placeholder_anon_key')
+                      !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY.includes('placeholder_anon_key') &&
+                      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY !== 'your_supabase_anon_key'
 
   if (loading) {
     return <div className="animate-pulse bg-gray-200 h-8 w-24 rounded"></div>

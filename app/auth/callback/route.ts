@@ -8,6 +8,12 @@ export async function GET(request: Request) {
 
   if (code) {
     const supabase = await createClient()
+    
+    // 如果Supabase未配置，重定向到错误页面
+    if (!supabase) {
+      return NextResponse.redirect(`${origin}/auth/auth-code-error`)
+    }
+    
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     
     if (!error) {
