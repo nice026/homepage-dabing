@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import GoogleSignInButton from "./GoogleSignInButton";
+import GitHubSignInButton from "./GitHubSignInButton";
+import UserProfile from "./UserProfile";
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
@@ -64,11 +67,15 @@ export default function Navbar() {
             </nav>
           )}
           
-          <button className="md:hidden text-slate-600 dark:text-slate-300 mt-4 md:mt-0">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <div className="flex items-center mt-4 md:mt-0 space-x-2">
+            {mounted && (
+              <>
+                <UserProfile />
+                <GoogleSignInButton />
+                <GitHubSignInButton />
+              </>
+            )}
+          </div>
         </div>
       </div>
     </header>
