@@ -1,51 +1,32 @@
 "use client";
 
+import { useState } from "react";
+
 export default function ContactSection() {
+  const [selectedQRCode, setSelectedQRCode] = useState<string | null>(null);
+  const [selectedTitle, setSelectedTitle] = useState<string>("");
+  
   const contactMethods = [
     {
-      name: "公众号",
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
-        </svg>
-      ),
-      value: "待补充",
-    },
-    {
       name: "微信",
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
-        </svg>
-      ),
-      value: "待补充",
+      icon: <img src="/微信.png" alt="微信" className="w-12 h-12" />,
+      value: "点我扫码",
+      qrCode: "/微信二维码.png",
+      title: "加好友进交流群"
     },
     {
-      name: "知乎",
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.616 21.223a.563.563 0 0 1-.562-.562v-2.954a8.637 8.637 0 0 1-4.98-1.603.562.562 0 1 1 .656-.914 7.508 7.508 0 0 0 4.324 1.393c4.15 0 7.527-3.377 7.527-7.527S16.203 2.53 12.053 2.53 4.526 5.907 4.526 10.057a7.5 7.5 0 0 0 1.438 4.424.562.562 0 0 1-.9.674 8.625 8.625 0 0 1-1.662-5.098c0-4.743 3.86-8.603 8.603-8.603s8.603 3.86 8.603 8.603-3.86 8.603-8.603 8.603a8.577 8.577 0 0 1-2.237-.296v2.798a.562.562 0 0 1-.562.562zm-.562-5.624a.562.562 0 0 1-.562-.562V5.438a.562.562 0 1 1 1.124 0v9.599a.562.562 0 0 1-.562.562zm0-3.749a.562.562 0 0 1-.398-.165l-2.812-2.812a.562.562 0 1 1 .795-.795l2.415 2.415 2.415-2.415a.562.562 0 1 1 .795.795l-2.812 2.812a.562.562 0 0 1-.398.165z"/>
-        </svg>
-      ),
-      value: "待补充",
+      name: "公众号",
+      icon: <img src="/公众号.png" alt="公众号" className="w-12 h-12" />,
+      value: "点我扫码",
+      qrCode: "/公众号二维码.jpg",
+      title: "AI开发请关注我"
     },
     {
-      name: "掘金",
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l8 4v9.82c0 4.37-2.94 8.44-7 9.66V4.18z"/>
-        </svg>
-      ),
-      value: "待补充",
-    },
-    {
-      name: "Github",
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-        </svg>
-      ),
-      value: "待补充",
+      name: "知识星球",
+      icon: <img src="/知识星球.png" alt="知识星球" className="w-12 h-12" />,
+      value: "点我扫码",
+      qrCode: "/知识星球二维码.jpg",
+      title: "更多干货扫码免费获取"
     },
   ];
 
@@ -53,20 +34,23 @@ export default function ContactSection() {
     <section id="contact" className="py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            联系方式
-          </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <div className="flex items-center justify-center mb-4">
+            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-full max-w-2xl"></div>
+          </div>
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
             欢迎与我交流技术、分享经验、探讨合作
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
           {contactMethods.map((method) => (
-            <a
+            <div
               key={method.name}
-              href="#"
-              className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg card-hover fade-in"
+              onClick={() => {
+                setSelectedQRCode(method.qrCode);
+                setSelectedTitle(method.title);
+              }}
+              className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg card-hover fade-in cursor-pointer"
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -77,18 +61,47 @@ export default function ContactSection() {
                   <p className="text-slate-600 dark:text-slate-300">{method.value}</p>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
         
-        <div className="text-center fade-in">
-          <p className="text-slate-600 dark:text-slate-300 mb-6">
-            期待与您的交流与合作，共同探索技术无限可能
-          </p>
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium btn-hover">
-            立即联系
-          </button>
-        </div>
+        {/* 二维码显示模态框 */}
+        {selectedQRCode && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            onClick={() => {
+              setSelectedQRCode(null);
+              setSelectedTitle("");
+            }}
+          >
+            <div 
+              className="bg-white dark:bg-slate-800 rounded-lg p-4 max-w-sm w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-lg font-semibold text-slate-800 dark:text-white">{selectedTitle}</h3>
+                <button 
+                  onClick={() => {
+                    setSelectedQRCode(null);
+                    setSelectedTitle("");
+                  }}
+                  className="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div className="flex justify-center">
+                <img 
+                  src={selectedQRCode} 
+                  alt="二维码" 
+                  className="max-w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

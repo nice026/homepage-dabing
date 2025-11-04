@@ -52,10 +52,10 @@ export default function SkillsSection() {
     <section id="skills" className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
             我的技能
           </h2>
-          <p className="text-center text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             精通现代技术栈，深入研究AI与技术融合，有大型应用架构设计经验，丰富的技术团队管理经验。
           </p>
         </div>

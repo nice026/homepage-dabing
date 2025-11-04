@@ -1,4 +1,3 @@
-import ProfileSection from "@/components/ProfileSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
@@ -10,7 +9,6 @@ export default function Home() {
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-6xl">
-        <ProfileSection />
         <PortfolioSection />
         <ContactSection />
       </main>
