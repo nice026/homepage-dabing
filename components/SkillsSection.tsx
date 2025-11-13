@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SkillsSection() {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState("frontend");
   
   const skills = {
@@ -20,16 +22,16 @@ export default function SkillsSection() {
       { name: "Go", level: 70 },
     ],
     ai: [
-      { name: "机器学习", level: 85 },
-      { name: "深度学习", level: 80 },
-      { name: "自然语言处理", level: 75 },
-      { name: "计算机视觉", level: 70 },
+      { name: t('skills.ai.machineLearning'), level: 85 },
+      { name: t('skills.ai.deepLearning'), level: 80 },
+      { name: t('skills.ai.nlp'), level: 75 },
+      { name: t('skills.ai.computerVision'), level: 70 },
     ],
     management: [
-      { name: "团队管理", level: 90 },
-      { name: "项目管理", level: 85 },
-      { name: "技术规划", level: 88 },
-      { name: "架构设计", level: 92 },
+      { name: t('skills.management.teamManagement'), level: 90 },
+      { name: t('skills.management.projectManagement'), level: 85 },
+      { name: t('skills.management.techPlanning'), level: 88 },
+      { name: t('skills.management.architectureDesign'), level: 92 },
     ],
   };
 
@@ -53,10 +55,10 @@ export default function SkillsSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
-            我的技能
+            {t('skills.title')}
           </h2>
           <p className="text-center text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            精通现代技术栈，深入研究AI与技术融合，有大型应用架构设计经验，丰富的技术团队管理经验。
+            {t('skills.description')}
           </p>
         </div>
         
@@ -71,10 +73,10 @@ export default function SkillsSection() {
                   : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600"
               }`}
             >
-              {category === "frontend" && "前端开发"}
-              {category === "backend" && "后端开发"}
-              {category === "ai" && "AI技术"}
-              {category === "management" && "管理能力"}
+              {category === "frontend" && t('skills.tabs.frontend')}
+              {category === "backend" && t('skills.tabs.backend')}
+              {category === "ai" && t('skills.tabs.ai')}
+              {category === "management" && t('skills.tabs.management')}
             </button>
           ))}
         </div>
@@ -83,10 +85,10 @@ export default function SkillsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-white">
-                {activeTab === "frontend" && "前端技术栈"}
-                {activeTab === "backend" && "后端技术栈"}
-                {activeTab === "ai" && "AI相关技能"}
-                {activeTab === "management" && "管理能力"}
+                {activeTab === "frontend" && t('skills.headings.frontend')}
+                {activeTab === "backend" && t('skills.headings.backend')}
+                {activeTab === "ai" && t('skills.headings.ai')}
+                {activeTab === "management" && t('skills.headings.management')}
               </h3>
               {skills[activeTab as keyof typeof skills].slice(0, Math.ceil(skills[activeTab as keyof typeof skills].length / 2)).map((skill) => (
                 <div key={skill.name} className="fade-in">
@@ -96,7 +98,7 @@ export default function SkillsSection() {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-white opacity-0">
-                占位
+                {t('skills.placeholder')}
               </h3>
               {skills[activeTab as keyof typeof skills].slice(Math.ceil(skills[activeTab as keyof typeof skills].length / 2)).map((skill) => (
                 <div key={skill.name} className="fade-in">
@@ -110,18 +112,18 @@ export default function SkillsSection() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl shadow-lg p-6 text-center card-hover">
             <div className="text-3xl mb-4">🚀</div>
-            <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">大型应用架构</h3>
-            <p className="text-slate-600 dark:text-slate-300">有丰富的大型互联网产品架构设计经验</p>
+            <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">{t('skills.highlights.architecture.title')}</h3>
+            <p className="text-slate-600 dark:text-slate-300">{t('skills.highlights.architecture.description')}</p>
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl shadow-lg p-6 text-center card-hover">
             <div className="text-3xl mb-4">🤖</div>
-            <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">AI技术融合</h3>
-            <p className="text-slate-600 dark:text-slate-300">深入研究D2C、Copilot等前沿技术</p>
+            <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">{t('skills.highlights.ai.title')}</h3>
+            <p className="text-slate-600 dark:text-slate-300">{t('skills.highlights.ai.description')}</p>
           </div>
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl shadow-lg p-6 text-center card-hover">
             <div className="text-3xl mb-4">👥</div>
-            <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">团队管理</h3>
-            <p className="text-slate-600 dark:text-slate-300">善于规划技术方向和推动团队创新</p>
+            <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">{t('skills.highlights.team.title')}</h3>
+            <p className="text-slate-600 dark:text-slate-300">{t('skills.highlights.team.description')}</p>
           </div>
         </div>
       </div>

@@ -1,0 +1,106 @@
+{
+  "languageToggle": {
+    "switchToEn": "Switch to English",
+    "switchToZh": "切换到中文"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Dabing",
+    "title": "AI Efficiency Development Expert",
+    "description": "15+ years of software development experience, focusing on AI intelligent development technology (agents & programming) and commercial exploration",
+    "primaryButton": "Contact Me",
+    "secondaryButton": "View Portfolio"
+  },
+  "profile": {
+    "name": "Dabing",
+    "title": "AI Efficiency Development Expert",
+    "description": "15+ years of software development experience, focusing on AI intelligent development technology (agents & programming) and commercial exploration. Committed to improving development efficiency through AI technology and promoting technological innovation and business value realization.",
+    "pmp": "PMP Project Manager",
+    "promptEngineer": "AI Prompt Engineer",
+    "aiAgentEngineer": "AI Agent Engineer",
+    "aiBreakthroughClub": "AI Breakthrough Club Action Taker",
+    "tag1": "AI Agent",
+    "tag2": "AI Programming",
+    "tag3": "Commercial Exploration"
+  },
+  "skills": {
+    "title": "My Skills",
+    "description": "Proficient in modern technology stacks, focusing on AI agent development and AI programming, combined with project management experience to provide comprehensive technical solutions.",
+    "tabs": {
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "ai": "AI Technology",
+      "management": "Management Skills"
+    },
+    "headings": {
+      "frontend": "Frontend Technology Stack",
+      "backend": "Backend Technology Stack",
+      "ai": "AI Related Skills",
+      "management": "Management Skills"
+    },
+    "placeholder": "Placeholder",
+    "ai": {
+      "machineLearning": "Machine Learning",
+      "deepLearning": "Deep Learning",
+      "naturalLanguageProcessing": "Natural Language Processing",
+      "computerVision": "Computer Vision"
+    },
+    "management": {
+      "teamManagement": "Team Management",
+      "projectManagement": "Project Management",
+      "technicalPlanning": "Technical Planning",
+      "architectureDesign": "Architecture Design"
+    },
+    "highlights": {
+      "architecture": {
+        "title": "Large-scale Application Architecture",
+        "description": "Capable of designing large-scale distributed systems, familiar with microservices architecture and cloud-native technologies, able to build high-availability, high-performance application systems."
+      },
+      "ai": {
+        "title": "AI Technology Integration",
+        "description": "Deeply integrate AI technology with traditional development processes to improve development efficiency and product quality, and promote intelligent transformation."
+      },
+      "team": {
+        "title": "Team Management",
+        "description": "Rich experience in team management, good at building technical teams and cultivating talents, promoting technological innovation and collaboration."
+      }
+    }
+  },
+  "achievements": {
+    "title": "My Achievements",
+    "description": "Technical sharing, professional certification and team contribution, recording the journey of growth",
+    "sharing": {
+      "title": "Technical Sharing",
+      "description": "Sharing AI technology integration experience at technical conferences, corporate training and other occasions to promote technical exchange and learning",
+      "item1": "Technical Conference Speech",
+      "item2": "Corporate Technical Training",
+      "item3": "Technical Blog Writing"
+    },
+    "certification": {
+      "title": "Professional Certification",
+      "description": "Obtained multiple professional certifications in technical fields, continuous learning and improvement, maintaining technical cutting-edge",
+      "item1": "Cloud Architect Certification",
+      "item2": "AI Engineer Certification",
+      "item3": "Agile Management Certification"
+    },
+    "contribution": {
+      "title": "Team Contribution",
+      "description": "Leading technical teams to complete multiple important projects, cultivating technical talents, and promoting team technical growth",
+      "item1": "Technical Team Building",
+      "item2": "Technical Talent Cultivation",
+      "item3": "Innovation Project Incubation"
+    },
+    "moreText": "More achievements and honors are being organized, please stay tuned...",
+    "moreButton": "Learn More"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Welcome to exchange technology, share experience, and explore cooperation with me",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "wechat": "WeChat",
+    "wechatQr": "WeChat QR Code",
+    "qrCodeAlt": "QR Code"
+  }
+}

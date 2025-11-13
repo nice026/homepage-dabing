@@ -1,0 +1,55 @@
+{
+  "portfolio": {
+    "title": "我的工具库",
+    "description": "精选实用工具，提升工作效率与生活品质",
+    "media": {
+      "title": "自媒体运营",
+      "description": "分享自媒体运营相关的工具，助力内容创作与传播",
+      "tag1": "内容创作",
+      "tag2": "数据分析",
+      "tag3": "社交媒体"
+    },
+    "office": {
+      "title": "日常办公",
+      "description": "分享日常办公所用的工具，提高工作效率",
+      "tag1": "文档处理",
+      "tag2": "时间管理",
+      "tag3": "团队协作"
+    },
+    "sites": {
+      "title": "好站分享",
+      "description": "分享其它外部优秀站点，发现更多优质资源",
+      "tag1": "学习资源",
+      "tag2": "设计灵感",
+      "tag3": "技术社区"
+    },
+    "moreText": "更多实用工具持续更新中...",
+    "viewMore": "查看更多"
+  },
+  "contact": {
+    "wechat": {
+      "name": "微信",
+      "value": "dabing_wechat",
+      "title": "添加微信好友"
+    },
+    "officialAccount": {
+      "name": "公众号",
+      "value": "dabing_official",
+      "title": "关注公众号"
+    },
+    "zsxq": {
+      "name": "知识星球",
+      "value": "dabing_zsxq",
+      "title": "加入知识星球"
+    }
+  },
+  "footer": {
+    "myWorks": "我的作品",
+    "tagsTitle": "技术标签",
+    "tag1": "AI智能体",
+    "tag2": "AI编程",
+    "tag3": "全栈开发",
+    "tag4": "项目管理",
+    "tag5": "技术创新"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "portfolio": {
+    "title": "My Tools Library",
+    "description": "Selected practical tools to enhance work efficiency and life quality",
+    "media": {
+      "title": "Media Operations",
+      "description": "Sharing tools related to self-media operations to assist content creation and dissemination",
+      "tag1": "Content Creation",
+      "tag2": "Data Analysis",
+      "tag3": "Social Media"
+    },
+    "office": {
+      "title": "Daily Office",
+      "description": "Sharing tools used for daily office work to improve work efficiency",
+      "tag1": "Document Processing",
+      "tag2": "Time Management",
+      "tag3": "Team Collaboration"
+    },
+    "sites": {
+      "title": "Good Sites Sharing",
+      "description": "Sharing other excellent external sites to discover more quality resources",
+      "tag1": "Learning Resources",
+      "tag2": "Design Inspiration",
+      "tag3": "Technical Communities"
+    },
+    "moreText": "More practical tools are continuously being updated...",
+    "viewMore": "View More"
+  },
+  "contact": {
+    "wechat": {
+      "name": "WeChat",
+      "value": "dabing_wechat",
+      "title": "Add WeChat Friend"
+    },
+    "officialAccount": {
+      "name": "Official Account",
+      "value": "dabing_official",
+      "title": "Follow Official Account"
+    },
+    "zsxq": {
+      "name": "Knowledge Planet",
+      "value": "dabing_zsxq",
+      "title": "Join Knowledge Planet"
+    }
+  },
+  "footer": {
+    "myWorks": "My Works",
+    "tagsTitle": "Tech Tags",
+    "tag1": "AI Agent",
+    "tag2": "AI Programming",
+    "tag3": "Full Stack Development",
+    "tag4": "Project Management",
+    "tag5": "Technology Innovation"
+  }
+}

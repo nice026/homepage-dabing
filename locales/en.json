@@ -1,0 +1,129 @@
+{
+  "navbar": {
+    "name": "Dabing",
+    "title": "AI Efficiency Development Expert",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "privacy": "Privacy/Terms",
+    "aiExpert": "AI Efficiency Development Expert",
+    "pmp": "PMP Project Management Engineer",
+    "promptEngineer": "AI Prompt Engineer",
+    "agentEngineer": "AI Agent Engineer",
+    "actionTaker": "AI Breakthrough Club Action Taker"
+  },
+  "footer": {
+    "title": "Dabing AI Development",
+    "description": "15+ years of software development experience, focusing on AI agents and AI programming development and commercial exploration.",
+    "quickLinks": "Quick Links",
+    "portfolio": "My Works",
+    "contact": "Contact",
+    "privacy": "Privacy/Terms",
+    "tags": "Professional Tags",
+    "aiAgent": "AI Agent",
+    "aiProgramming": "AI Programming",
+    "aiPrompt": "AI Prompt",
+    "sideBusiness": "Side Business",
+    "webOverseas": "Web Overseas",
+    "copyright": "© {year} Dabing's Personal Homepage. All rights reserved.",
+    "slogan": "AI Study , You and I Together! AI Makes Work and Life Better!",
+    "serviceEmail": "Customer Service Email: "
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy and Terms of Service",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "lastUpdated": "Last Updated: {date}",
+    "privacy": {
+      "title": "Privacy Policy",
+      "infoCollection": {
+        "title": "1. Information Collection",
+        "description": "We may collect the following types of information:",
+        "items": [
+          "Information you voluntarily provide, such as name and email address in contact forms",
+          "Automatically collected information, such as IP address, browser type, access time, etc.",
+          "Information collected through cookies and similar technologies"
+        ]
+      },
+      "infoUsage": {
+        "title": "2. Information Usage",
+        "description": "The information we collect may be used for the following purposes:",
+        "items": [
+          "To provide, maintain and improve our services",
+          "To process your requests and respond to your inquiries",
+          "To send information and services you request",
+          "To monitor website usage to improve user experience"
+        ]
+      },
+      "infoSharing": {
+        "title": "3. Information Sharing",
+        "description": "We do not sell, trade or transfer your personal information to third parties unless we obtain your consent or are required by law. We may share information with the following entities:",
+        "items": [
+          "Service providers, such as website hosting, data analysis, etc.",
+          "Government agencies under legal requirements",
+          "Our business partners (with your consent)"
+        ]
+      },
+      "dataSecurity": {
+        "title": "4. Data Security",
+        "description": "We take appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure or destruction. However, please note that no internet transmission method or electronic storage method is 100% secure."
+      },
+      "cookiePolicy": {
+        "title": "5. Cookie Policy",
+        "description": "We use cookies to enhance your experience, analyze website usage and provide personalized content. You can control the use of cookies through your browser settings."
+      },
+      "contactUs": {
+        "title": "6. Contact Us",
+        "description": "If you have any questions or concerns about our privacy policy, please contact us through:",
+        "email": "Email: "
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "serviceOverview": {
+        "title": "1. Service Overview",
+        "description": "Dabing AI Development website (hereinafter referred to as \"this website\") provides AI intelligent development technology related information and services. By accessing or using this website, you agree to abide by these terms of service."
+      },
+      "useLicense": {
+        "title": "2. Use License",
+        "description": "We grant you a limited, non-exclusive, non-transferable license to access and use this website for personal or commercial purposes, provided you comply with these terms."
+      },
+      "userBehavior": {
+        "title": "3. User Behavior",
+        "description": "When using this website, you agree not to:",
+        "items": [
+          "Violate any applicable laws and regulations",
+          "Infringe on the intellectual property rights of others",
+          "Post or transmit any harmful, threatening, defamatory, obscene or other illegal or inappropriate content",
+          "Interfere with or disrupt the operation of the website or server",
+          "Unauthorized access or use of any part of the website"
+        ]
+      },
+      "intellectualProperty": {
+        "title": "4. Intellectual Property",
+        "description": "This website and all its content, including but not limited to text, graphics, images, software and other materials, are protected by copyright, trademark and other intellectual property laws. Without our express written permission, you may not copy, modify, distribute, display, perform or create derivative works based on the content of this website."
+      },
+      "disclaimer": {
+        "title": "5. Disclaimer",
+        "description": "This website is provided \"as is\" without any express or implied warranties. We do not guarantee the accuracy, completeness or reliability of the website content, nor do we guarantee that the website will run uninterrupted or error-free."
+      },
+      "limitationOfLiability": {
+        "title": "6. Limitation of Liability",
+        "description": "To the maximum extent permitted by law, we shall not be liable for any direct, indirect, incidental, special or consequential damages, whether based on contract, tort or other legal theory, even if we have been advised of the possibility of such damages."
+      },
+      "serviceChanges": {
+        "title": "7. Service Changes",
+        "description": "We reserve the right to modify or terminate the service at any time without notice. We shall not be liable to you or any third party for any modification, price change, suspension or discontinuation of the service."
+      },
+      "termsChanges": {
+        "title": "8. Terms Changes",
+        "description": "We reserve the right to modify these terms of service at any time. The updated terms will be posted on this website and will take effect immediately. Your continued use of this website indicates that you accept the modified terms."
+      },
+      "contactUs": {
+        "title": "9. Contact Us",
+        "description": "If you have any questions about these terms of service, please contact us through:",
+        "email": "Email: "
+      }
+    },
+    "backToHome": "← Back to Home"
+  }
+}

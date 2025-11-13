@@ -1,34 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactSection() {
+  const { t, language, setLanguage } = useLanguage();
+  
   const [selectedQRCode, setSelectedQRCode] = useState<string | null>(null);
   const [selectedTitle, setSelectedTitle] = useState<string>("");
   
   const contactMethods = [
     {
-      name: "微信",
-      icon: <img src="/微信.png" alt="微信" className="w-12 h-12" />,
-      value: "点我扫码",
-      qrCode: "/微信二维码.png",
-      title: "加好友进交流群"
+      name: t('contact.wechat.name'),
+      icon: "/wechat.png",
+      value: language === 'en' ? 'Click to Scan' : '点我扫码',
+      qrCode: "/wechat-qr.png",
+      title: t('contact.wechat.title')
     },
     {
-      name: "公众号",
-      icon: <img src="/公众号.png" alt="公众号" className="w-12 h-12" />,
-      value: "点我扫码",
-      qrCode: "/公众号二维码.jpg",
-      title: "AI开发请关注我"
+      name: t('contact.officialAccount.name'),
+      icon: "/official-account.png",
+      value: language === 'en' ? 'Click to Scan' : '点我扫码',
+      qrCode: "/official-account-qr.jpg",
+      title: t('contact.officialAccount.title')
     },
     {
-      name: "知识星球",
-      icon: <img src="/知识星球.png" alt="知识星球" className="w-12 h-12" />,
-      value: "点我扫码",
-      qrCode: "/知识星球二维码.jpg",
-      title: "更多干货扫码免费获取"
+      name: t('contact.zsxq.name'),
+      icon: "/zsxq.png",
+      value: language === 'en' ? 'Click to Scan' : '点我扫码',
+      qrCode: "/zsxq-qr.jpg",
+      title: t('contact.zsxq.title')
     },
   ];
+
+  console.log('Contact methods:', contactMethods, 'language:', language);
 
   return (
     <section id="contact" className="py-16 md:py-24">
@@ -38,7 +43,7 @@ export default function ContactSection() {
             <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-full max-w-2xl"></div>
           </div>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            欢迎与我交流技术、分享经验、探讨合作
+            {t('contact.description')}
           </p>
         </div>
         
@@ -53,9 +58,18 @@ export default function ContactSection() {
               className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg card-hover fade-in cursor-pointer"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  {method.icon}
-                </div>
+                <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                    <img 
+                        src={method.icon} 
+                        alt={method.name} 
+                        width="48"
+                        height="48"
+                        className="w-12 h-12"
+                        style={{ objectFit: 'contain' }}
+                        onError={(e) => console.error('Image load error:', e)}
+                        onLoad={() => console.log('Image loaded:', method.icon)}
+                    />
+                  </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-800 dark:text-white">{method.name}</h3>
                   <p className="text-slate-600 dark:text-slate-300">{method.value}</p>
@@ -93,12 +107,15 @@ export default function ContactSection() {
                 </button>
               </div>
               <div className="flex justify-center">
-                <img 
-                  src={selectedQRCode} 
-                  alt="二维码" 
-                  className="max-w-full h-auto"
-                />
-              </div>
+                  <img 
+                    src={selectedQRCode} 
+                    alt={t('contact.qrCodeAlt')} 
+                    width="300"
+                    height="300"
+                    className="max-w-full h-auto"
+                    style={{ maxHeight: '300px' }}
+                  />
+                </div>
             </div>
           </div>
         )}

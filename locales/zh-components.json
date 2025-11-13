@@ -1,0 +1,148 @@
+{
+  "languageToggle": {
+    "switchToEn": "切换到英文",
+    "switchToZh": "Switch to Chinese"
+  },
+  "hero": {
+    "greeting": "你好，我是",
+    "name": "大兵",
+    "title": "AI 智效开发专家",
+    "description": "15年+软件开发经验，专注于AI智能开发技术（智能体&编程）与商业化探索",
+    "primaryButton": "联系我",
+    "secondaryButton": "查看作品"
+  },
+  "profile": {
+    "name": "大兵",
+    "title": "AI 智效开发专家",
+    "description": "15年+软件开发经验，专注于AI智能开发技术（智能体&编程）与商业化探索。致力于通过AI技术提升开发效率，推动技术创新与商业价值实现。",
+    "pmp": "PMP项目管理师",
+    "promptEngineer": "工信部AI提示词工程师",
+    "aiAgentEngineer": "工信部AI智能体工程师",
+    "aiBreakthroughClub": "AI破局俱乐部行动家",
+    "tag1": "AI智能体",
+    "tag2": "AI编程",
+    "tag3": "商业化探索"
+  },
+  "skills": {
+    "title": "我的技能",
+    "description": "精通现代技术栈，专注于AI智能体开发与AI编程，结合项目管理经验，提供全方位的技术解决方案。",
+    "tabs": {
+      "frontend": "前端开发",
+      "backend": "后端开发",
+      "ai": "AI技术",
+      "management": "管理能力"
+    },
+    "headings": {
+      "frontend": "前端技术栈",
+      "backend": "后端技术栈",
+      "ai": "AI相关技能",
+      "management": "管理能力"
+    },
+    "placeholder": "占位",
+    "ai": {
+      "machineLearning": "机器学习",
+      "deepLearning": "深度学习",
+      "naturalLanguageProcessing": "自然语言处理",
+      "computerVision": "计算机视觉"
+    },
+    "management": {
+      "teamManagement": "团队管理",
+      "projectManagement": "项目管理",
+      "technicalPlanning": "技术规划",
+      "architectureDesign": "架构设计"
+    },
+    "highlights": {
+      "architecture": {
+        "title": "大型应用架构",
+        "description": "具备设计大型分布式系统的能力，熟悉微服务架构和云原生技术，能够构建高可用、高性能的应用系统。"
+      },
+      "ai": {
+        "title": "AI技术融合",
+        "description": "将AI技术与传统开发流程深度融合，提升开发效率和产品质量，推动智能化转型。"
+      },
+      "team": {
+        "title": "团队管理",
+        "description": "拥有丰富的团队管理经验，擅长技术团队建设与人才培养，推动技术创新与协作。"
+      }
+    }
+  },
+  "achievements": {
+    "title": "我的成就",
+    "description": "技术分享、专业认证与团队贡献，记录成长历程",
+    "sharing": {
+      "title": "技术分享",
+      "description": "在技术大会、企业内训等场合分享AI技术融合经验，推动技术交流与学习",
+      "item1": "技术大会演讲",
+      "item2": "企业技术培训",
+      "item3": "技术博客写作"
+    },
+    "certification": {
+      "title": "专业认证",
+      "description": "获得多项技术领域专业认证，持续学习与提升，保持技术前沿性",
+      "item1": "云架构师认证",
+      "item2": "AI工程师认证",
+      "item3": "敏捷管理认证"
+    },
+    "contribution": {
+      "title": "团队贡献",
+      "description": "带领技术团队完成多个重要项目，培养技术人才，推动团队技术成长",
+      "item1": "技术团队建设",
+      "item2": "技术人才培养",
+      "item3": "创新项目孵化"
+    },
+    "moreText": "更多成就与荣誉正在整理中，敬请期待...",
+    "moreButton": "了解更多"
+  },
+  "contact": {
+    "title": "联系方式",
+    "description": "欢迎与我交流技术、分享经验、探讨合作",
+    "email": "邮箱",
+    "phone": "电话",
+    "address": "地址",
+    "wechatQr": "微信二维码",
+    "qrCodeAlt": "二维码",
+    "wechat": {
+      "name": "微信",
+      "value": "点我扫码",
+      "title": "添加微信好友"
+    },
+    "officialAccount": {
+      "name": "公众号",
+      "value": "点我扫码",
+      "title": "关注公众号"
+    },
+    "zsxq": {
+      "name": "知识星球",
+      "value": "点我扫码",
+      "title": "加入知识星球"
+    }
+  },
+  "navbar": {
+    "name": "大兵",
+    "title": "AI 智效开发专家",
+    "pmp": "PMP项目管理师",
+    "promptEngineer": "工信部AI提示词工程师",
+    "aiAgentEngineer": "工信部AI智能体工程师",
+    "aiBreakthroughClub": "AI破局俱乐部行动家",
+    "portfolio": "作品集",
+    "contact": "联系方式",
+    "privacy": "隐私政策"
+  },
+  "footer": {
+    "title": "大兵AI开发",
+    "description": "15年+软件开发经验，专注于AI智能体与AI编程开发与商业化探索。",
+    "quickLinks": "快速链接",
+    "myWorks": "我的作品",
+    "contact": "联系方式",
+    "privacy": "隐私/条款",
+    "tagsTitle": "专业标签",
+    "tag1": "AI Agent",
+    "tag2": "AI编程",
+    "tag3": "AI提示词",
+    "tag4": "副业",
+    "tag5": "出海",
+    "copyright": "© {year} 大兵的个人主页. 保留所有权利.",
+    "slogan": "AI创富，你我同行！AI让工作生活更美好！",
+    "serviceEmail": "客服邮箱"
+  }
+}

@@ -6,10 +6,13 @@ import Image from "next/image";
 // import GoogleSignInButton from "./GoogleSignInButton";
 // import GitHubSignInButton from "./GitHubSignInButton";
 import UserProfile from "./UserProfile";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useLanguage();
   
   useEffect(() => {
     setMounted(true);
@@ -54,24 +57,24 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <div className="text-xl font-bold text-slate-800 dark:text-white">
-                大兵  <span className="text-sm font-normal text-slate-600 dark:text-slate-300">AI 智效开发专家</span>
+                {t('navbar.name')}  <span className="text-sm font-normal text-slate-600 dark:text-slate-300">{t('navbar.title')}</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-300 flex flex-wrap gap-x-2 gap-y-1 mt-1">
                 <span className="flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                  PMP项目管理工程师
+                  {t('navbar.pmp')}
                 </span>
                 <span className="flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
-                  工信部AI提示词工程师
+                  {t('navbar.promptEngineer')}
                 </span>
                 <span className="flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-                  工信部AI智能体工程师
+                  {t('navbar.aiAgentEngineer')}
                 </span>
                 <span className="flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-                  AI破局俱乐部行动家
+                  {t('navbar.aiBreakthroughClub')}
                 </span>
               </div>
             </div>
@@ -83,20 +86,31 @@ export default function Navbar() {
                 onClick={() => scrollToSection("portfolio")}
                 className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                作品
+                {t('navbar.portfolio')}
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                联系方式
+                {t('navbar.contact')}
               </button>
+              <a
+                href="/privacy-policy"
+                className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('navbar.privacy')}
+              </a>
             </nav>
           )}
           
           <div className="flex items-center mt-4 md:mt-0 space-x-2">
             {mounted && (
               <>
+                <div className="-ml-31">
+                  <LanguageToggle />
+                </div>
                 <UserProfile />
                 {/* 暂时屏蔽OAuth登录按钮
                 <GoogleSignInButton />
