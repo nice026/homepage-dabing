@@ -29,33 +29,38 @@ interface LanguageContextType {
 // 创建上下文
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// 合并翻译文件
-const mergedZh = { ...zhComponentsTranslations, ...zhAdditionalTranslations, ...zhTranslations };
-const mergedEn = { ...enComponentsTranslations, ...enAdditionalTranslations, ...enTranslations };
+// 合并翻译文件 - 确保组件翻译文件优先级更高
+const mergedZh = { ...zhTranslations, ...zhAdditionalTranslations, ...zhComponentsTranslations };
+const mergedEn = { ...enTranslations, ...enAdditionalTranslations, ...enComponentsTranslations };
 
 // 提供者组件
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguageState] = useState<Language>('zh');
+  const [language, setLanguageState] = useState<Language>('en');
   
   // 从localStorage和URL获取语言设置
   useEffect(() => {
     // 首先尝试从URL参数获取语言设置
     if (typeof window !== 'undefined') {
-      const urlParams = new URLSearchParams(window.location.search);
-      const urlLanguage = urlParams.get('lang') as Language;
-      
-      // 也检查URL路径，如 /en 或 /zh
-      const pathSegments = window.location.pathname.split('/').filter(Boolean);
-      const pathLanguage = pathSegments[0] as Language;
-      
-      if (urlLanguage && (urlLanguage === 'zh' || urlLanguage === 'en')) {
-        setLanguageState(urlLanguage);
-        localStorage.setItem('language', urlLanguage);
-        return;
-      } else if (pathLanguage && (pathLanguage === 'zh' || pathLanguage === 'en')) {
-        setLanguageState(pathLanguage);
-        localStorage.setItem('language', pathLanguage);
-        return;
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLanguage = urlParams.get('lang') as Language;
+        
+        // 也检查URL路径，如 /en 或 /zh
+        const pathname = window.location.pathname || '';
+        const pathSegments = pathname.split('/').filter(Boolean);
+        const pathLanguage = pathSegments[0] as Language;
+        
+        if (urlLanguage && (urlLanguage === 'zh' || urlLanguage === 'en')) {
+          setLanguageState(urlLanguage);
+          localStorage.setItem('language', urlLanguage);
+          return;
+        } else if (pathLanguage && (pathLanguage === 'zh' || pathLanguage === 'en')) {
+          setLanguageState(pathLanguage);
+          localStorage.setItem('language', pathLanguage);
+          return;
+        }
+      } catch (error) {
+        console.error('Error processing URL for language detection:', error);
       }
     }
     
