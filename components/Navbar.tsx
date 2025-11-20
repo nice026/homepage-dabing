@@ -88,12 +88,14 @@ export default function Navbar() {
               >
                 {t('navbar.portfolio')}
               </button>
+              {/* 暂时隐藏会员权益入口
               <a
                 href="/membership"
                 className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {t('navbar.membership')}
               </a>
+              */}
               <button
                 onClick={() => scrollToSection("contact")}
                 className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"

@@ -57,6 +57,7 @@
     "privacyTab": "隐私政策",
     "termsTab": "服务条款",
     "lastUpdated": "最后更新日期：{date}",
+    "backToHome": "返回主页",
     "privacy": {
       "title": "隐私政策",
       "infoCollection": {

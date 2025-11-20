@@ -25,9 +25,11 @@ export default function Footer() {
               <li>
                 <a href="#portfolio" className="text-slate-300 hover:text-white transition-colors">{t('footer.portfolio')}</a>
               </li>
+              {/* 暂时隐藏会员权益入口
               <li>
                 <a href="/membership" className="text-slate-300 hover:text-white transition-colors">{t('footer.membership')}</a>
               </li>
+              */}
               <li>
                 <a href="#contact" className="text-slate-300 hover:text-white transition-colors">{t('footer.contact')}</a>
               </li>
