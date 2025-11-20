@@ -93,6 +93,40 @@
     "moreText": "更多成就与荣誉正在整理中，敬请期待...",
     "moreButton": "了解更多"
   },
+  "payment": {
+    "form": {
+      "title": "支付信息",
+      "billingInfo": "账单信息",
+      "plan": "会员计划",
+      "price": "价格",
+      "total": "总计",
+      "testMode": "测试模式",
+      "testCardHint": "当前为测试模式，您可以使用测试卡号 4242 4242 4242 4242 进行测试",
+      "cardName": "持卡人姓名",
+      "cardNamePlaceholder": "请输入持卡人姓名",
+      "cardNumber": "信用卡号",
+      "expiryDate": "有效期",
+      "cvv": "CVV 码",
+      "processing": "处理中...",
+      "submit": "确认支付",
+      "cardNumberError": "请输入有效的信用卡号",
+      "cardNameError": "请输入持卡人姓名",
+      "expiryError": "请输入有效的有效期格式 (MM/YY)",
+      "cvvError": "请输入有效的 CVV 码"
+    },
+    "success": {
+      "noSessionId": "未找到支付会话ID",
+      "verificationFailed": "支付验证失败",
+      "error": "支付处理过程中发生错误",
+      "verifying": "正在验证支付状态...",
+      "errorTitle": "支付失败",
+      "backToMembership": "返回会员页面",
+      "backToHome": "返回首页",
+      "title": "支付成功",
+      "message": "您的会员已成功开通！",
+      "viewMembership": "查看会员"
+    }
+  },
   "contact": {
     "title": "联系方式",
     "description": "欢迎与我交流技术、分享经验、探讨合作",
@@ -125,6 +159,7 @@
     "aiAgentEngineer": "工信部AI智能体工程师",
     "aiBreakthroughClub": "AI破局俱乐部行动家",
     "portfolio": "作品集",
+    "membership": "会员权益",
     "contact": "联系方式",
     "privacy": "隐私政策"
   },
@@ -135,6 +170,7 @@
     "portfolio": "我的作品",
     "contact": "联系方式",
     "privacy": "隐私/条款",
+    "membership": "会员权益",
     "tags": "专业标签",
     "aiAgent": "AI Agent",
     "aiProgramming": "AI编程",
@@ -144,5 +180,67 @@
     "copyright": "© {year} 大兵的个人主页. 保留所有权利.",
     "slogan": "AI创富，你我同行！AI让工作生活更美好！",
     "serviceEmail": "客服邮箱"
+  },
+  "membership": {
+    "title": "会员权益",
+    "description": "选择适合您的会员计划，享受专属权益和服务",
+    "popular": "最受欢迎",
+    "free": "免费",
+    "loading": "处理中...",
+    "plans": {
+      "registered": {
+        "name": "注册会员",
+        "period": "永久免费",
+        "description": "注册账号即可享受基础服务",
+        "features": {
+          "freeTools": "免费工具无限制使用",
+          "paidToolsTrial": "付费工具10次体验机会",
+          "freeGroup": "赠送免费交流群"
+        },
+        "buttonText": "立即注册"
+      },
+      "premium": {
+        "name": "高级会员",
+        "period": "每年",
+        "description": "适合个人用户和小团队的进阶选择",
+        "features": {
+          "freeTools": "免费工具无限制使用",
+          "paidToolsDaily": "付费工具每天10次使用机会",
+          "freeGroup": "赠送免费交流群",
+          "paidGroup": "赠送付费陪伴群"
+        },
+        "buttonText": "立即开通"
+      },
+      "super": {
+        "name": "超级会员",
+        "period": "每年",
+        "description": "适合专业用户和企业的最佳选择",
+        "features": {
+          "freeTools": "免费工具无限制使用",
+          "paidToolsUnlimited": "付费工具无限制使用",
+          "freeGroup": "赠送免费交流群",
+          "paidGroup": "赠送付费陪伴群",
+          "guidance": "赠送专属定位指导2次"
+        },
+        "buttonText": "立即开通"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "如何升级会员等级？",
+      "a1": "您可以随时在会员页面选择升级您的会员等级，支付相应费用后立即生效。",
+      "q2": "会员权益如何使用？",
+      "a2": "登录您的账户后，所有会员权益将自动生效，您可以直接使用相应的工具和服务。",
+      "q3": "可以退款吗？",
+      "a3": "我们提供7天无理由退款保证，如果您对服务不满意，可以在购买后7天内申请退款。",
+      "q4": "会员有效期是多久？",
+      "a4": "付费会员的有效期为一年，从购买之日起计算。注册会员永久有效。"
+    },
+    "register": {
+      "success": "注册成功！欢迎加入我们的社区。"
+    },
+    "payment": {
+      "error": "支付处理失败，请重试或联系客服。"
+    }
   }
 }

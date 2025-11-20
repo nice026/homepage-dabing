@@ -29,9 +29,32 @@ interface LanguageContextType {
 // 创建上下文
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// 合并翻译文件 - 确保组件翻译文件优先级更高
-const mergedZh = { ...zhTranslations, ...zhAdditionalTranslations, ...zhComponentsTranslations };
-const mergedEn = { ...enTranslations, ...enAdditionalTranslations, ...enComponentsTranslations };
+// Deep merge function to preserve nested translation keys
+function deepMerge(target: any, ...sources: any[]): any {
+  if (!sources.length) return target;
+  const source = sources.shift();
+
+  if (isObject(target) && isObject(source)) {
+    for (const key in source) {
+      if (isObject(source[key])) {
+        if (!target[key]) Object.assign(target, { [key]: {} });
+        deepMerge(target[key], source[key]);
+      } else {
+        Object.assign(target, { [key]: source[key] });
+      }
+    }
+  }
+
+  return deepMerge(target, ...sources);
+}
+
+function isObject(item: any): item is Record<string, any> {
+  return item && typeof item === 'object' && !Array.isArray(item);
+}
+
+// 合并翻译文件 - 使用深度合并确保嵌套键被正确保留
+const mergedZh = deepMerge({}, zhTranslations, zhAdditionalTranslations, zhComponentsTranslations);
+const mergedEn = deepMerge({}, enTranslations, enAdditionalTranslations, enComponentsTranslations);
 
 // 提供者组件
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {

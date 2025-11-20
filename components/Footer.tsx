@@ -26,6 +26,9 @@ export default function Footer() {
                 <a href="#portfolio" className="text-slate-300 hover:text-white transition-colors">{t('footer.portfolio')}</a>
               </li>
               <li>
+                <a href="/membership" className="text-slate-300 hover:text-white transition-colors">{t('footer.membership')}</a>
+              </li>
+              <li>
                 <a href="#contact" className="text-slate-300 hover:text-white transition-colors">{t('footer.contact')}</a>
               </li>
               <li>

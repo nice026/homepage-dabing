@@ -93,6 +93,40 @@
     "moreText": "More achievements and honors are being organized, please stay tuned...",
     "moreButton": "Learn More"
   },
+  "payment": {
+    "form": {
+      "title": "Payment Information",
+      "billingInfo": "Billing Information",
+      "plan": "Membership Plan",
+      "price": "Price",
+      "total": "Total",
+      "testMode": "Test Mode",
+      "testCardHint": "Currently in test mode, you can use test card number 4242 4242 4242 4242 for testing",
+      "cardName": "Cardholder Name",
+      "cardNamePlaceholder": "Please enter cardholder name",
+      "cardNumber": "Credit Card Number",
+      "expiryDate": "Expiry Date",
+      "cvv": "CVV Code",
+      "processing": "Processing...",
+      "submit": "Confirm Payment",
+      "cardNumberError": "Please enter a valid credit card number",
+      "cardNameError": "Please enter cardholder name",
+      "expiryError": "Please enter a valid expiry date format (MM/YY)",
+      "cvvError": "Please enter a valid CVV code"
+    },
+    "success": {
+      "noSessionId": "Payment session ID not found",
+      "verificationFailed": "Payment verification failed",
+      "error": "An error occurred during payment processing",
+      "verifying": "Verifying payment status...",
+      "errorTitle": "Payment Failed",
+      "backToMembership": "Back to Membership",
+      "backToHome": "Back to Home",
+      "title": "Payment Successful",
+      "message": "Your membership has been successfully activated!",
+      "viewMembership": "View Membership"
+    }
+  },
   "contact": {
     "title": "Contact",
     "description": "Welcome to discuss technology, share experiences, and explore cooperation",
@@ -121,10 +155,11 @@
     "name": "Dabing",
     "title": "AI Efficiency Development Expert",
     "pmp": "PMP Project Manager",
-    "promptEngineer": "AI Prompt Engineer",
-    "aiAgentEngineer": "AI Agent Engineer",
-    "aiBreakthroughClub": "AI Breakthrough Club Action Taker",
+    "promptEngineer": "MIIT AI Prompt Engineer",
+    "aiAgentEngineer": "MIIT AI Agent Engineer",
+    "aiBreakthroughClub": "AI Breakthrough Club Activist",
     "portfolio": "Portfolio",
+    "membership": "Membership",
     "contact": "Contact",
     "privacy": "Privacy Policy"
   },
@@ -135,6 +170,7 @@
     "portfolio": "My Works",
     "contact": "Contact",
     "privacy": "Privacy/Terms",
+    "membership": "Membership",
     "tags": "Professional Tags",
     "aiAgent": "AI Agent",
     "aiProgramming": "AI Programming",
@@ -144,5 +180,67 @@
     "copyright": "© {year} Dabing's Personal Homepage. All rights reserved.",
     "slogan": "AI Study , You and I Together! AI Makes Work and Life Better!",
     "serviceEmail": "Customer Service Email"
+  },
+  "membership": {
+    "title": "Membership Benefits",
+    "description": "Choose the membership plan that suits you and enjoy exclusive benefits and services",
+    "popular": "Most Popular",
+    "free": "Free",
+    "loading": "Processing...",
+    "plans": {
+      "registered": {
+        "name": "Registered Member",
+        "period": "Forever Free",
+        "description": "Register an account to enjoy basic services",
+        "features": {
+          "freeTools": "Unlimited access to free tools",
+          "paidToolsTrial": "10 trial uses of paid tools",
+          "freeGroup": "Access to free community group"
+        },
+        "buttonText": "Register Now"
+      },
+      "premium": {
+        "name": "Premium Member",
+        "period": "per year",
+        "description": "Advanced choice for individual users and small teams",
+        "features": {
+          "freeTools": "Unlimited access to free tools",
+          "paidToolsDaily": "10 daily uses of paid tools",
+          "freeGroup": "Access to free community group",
+          "paidGroup": "Access to premium support group"
+        },
+        "buttonText": "Subscribe Now"
+      },
+      "super": {
+        "name": "Super Member",
+        "period": "per year",
+        "description": "Best choice for professional users and enterprises",
+        "features": {
+          "freeTools": "Unlimited access to free tools",
+          "paidToolsUnlimited": "Unlimited access to paid tools",
+          "freeGroup": "Access to free community group",
+          "paidGroup": "Access to premium support group",
+          "guidance": "2 exclusive guidance sessions"
+        },
+        "buttonText": "Subscribe Now"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How to upgrade membership level?",
+      "a1": "You can upgrade your membership level at any time on the membership page, and it will take effect immediately after paying the corresponding fee.",
+      "q2": "How to use membership benefits?",
+      "a2": "After logging into your account, all membership benefits will be automatically activated, and you can directly use the corresponding tools and services.",
+      "q3": "Can I get a refund?",
+      "a3": "We offer a 7-day no-reason refund guarantee. If you are not satisfied with the service, you can apply for a refund within 7 days of purchase.",
+      "q4": "How long is the membership valid?",
+      "a4": "The validity period of paid membership is one year, calculated from the date of purchase. Registered membership is permanently valid."
+    },
+    "register": {
+      "success": "Registration successful! Welcome to our community."
+    },
+    "payment": {
+      "error": "Payment processing failed, please try again or contact customer service."
+    }
   }
 }
